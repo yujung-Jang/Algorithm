@@ -13,8 +13,8 @@ public class Main {
 
             switch (s.charAt(i)) {
                 case 'A': case 'B': case 'C':
-                count += 3;
-                break;
+                    count += 3;
+                    break;
 
                 case 'D': case 'E': case 'F':
                     count += 4;
