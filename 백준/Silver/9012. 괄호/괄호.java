@@ -1,16 +1,21 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Stack;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
-        int t = sc.nextInt();
+        int t = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < t; i++) {
-            System.out.println(stack(sc.next()));
+            sb.append(stack(br.readLine())).append("\n");
         }
+
+        System.out.println(sb);
     }
 
     public static String stack(String s) {
