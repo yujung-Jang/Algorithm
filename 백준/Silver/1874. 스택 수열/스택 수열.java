@@ -12,7 +12,7 @@ public class Main {
 
         int last = 0;
 
-        while (n --> 0) {
+        while (n-- > 0) {
             int input = sc.nextInt();
 
             //입력된 값이 현재의 마지막 값보다 클 때
