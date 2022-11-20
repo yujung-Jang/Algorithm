@@ -44,7 +44,7 @@ class Solution {
                 }
 
                 // 아직 방문하지 않았고, 벽이 아닐 경우
-                if (visited[nX][nY] == 0 && maps[nX][nY] == 1) {
+                if (visited[nX][nY] == 0 && maps[nX][Y] == 1) {
                     visited[nX][nY] = visited[X][Y] + 1;
                     q.add(new int[]{nX, nY});
                 }
