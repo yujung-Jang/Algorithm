@@ -6,7 +6,7 @@ N_list = list(map(int, sys.stdin.readline().split()))
 sort_list = sorted(set(N_list)) # set으로 중복을 제거하고 정렬한다 -> list로 변환된다
 
 """
-list.index(i): 시간 복잡도 O(N)로, 시간 초과 발생
+list.index(i): 시간 복잡도 O(N)으로, 시간 초과 발생
 
 for i in range(N):
     print(sort_list.index(N_list[i]), end = " ") # N_list의 값의 인덱스가 압축한 좌표이다
