@@ -16,9 +16,8 @@ queue = deque()
 for i in range(H):
     for j in range(N):
         for k in range(M):
-            if box[i][j][k] == 1 and not visited[i][j][k]:
+            if box[i][j][k] == 1:
                 queue.append((i, j, k))
-                visited[i][j][k] = True
 
 def bfs():
     while queue:
