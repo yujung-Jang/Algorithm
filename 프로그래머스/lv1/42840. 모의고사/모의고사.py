@@ -3,26 +3,18 @@ def solution(answers):
     c2 = [2, 1, 2, 3, 2, 4, 2, 5]
     c3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
     
-    s1, s2, s3 = 0, 0, 0 # 각 학생의 정답 수
-    for i in range(len(answers)):
-        o1 = i % 5
-        o2 = i % 8
-        o3 = i % 10
-        
-        if answers[i] == c1[o1]:
-            s1 += 1
-        if answers[i] == c2[o2]:
-            s2 += 1
-        if answers[i] == c3[o3]:
-            s3 += 1
+    score = [0, 0, 0]
+    for idx, answer in enumerate(answers):
+        if answer == c1[idx % len(c1)]:
+            score[0] += 1
+        if answer == c2[idx % len(c2)]:
+            score[1] += 1
+        if answer == c3[idx % len(c3)]:
+            score[2] += 1
     
-    g = max(s1, s2, s3)
     answer = []
-    if s1 == g:
-        answer.append(1)
-    if s2 == g:
-        answer.append(2)
-    if s3 == g:
-        answer.append(3)
-        
-    return sorted(answer) if len(answer) != 1 else answer
+    for idx, s in enumerate(score):
+        if s == max(score):
+            answer.append(idx + 1)
+
+    return answer
